@@ -1,0 +1,54 @@
+/* 標籤的基本樣式 */
+body {
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}
+
+body {
+  a {
+    padding: 10px;
+
+    // 滑鼠移過時的微透白效果
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      color: $primary-200;
+    }
+
+    // 點擊瞬間 (:active) 或被標記為當前啟用狀態 (.active)
+    &:active,
+    &.active {
+      background-color: rgba(210, 180, 254, 0.15); // 微亮透紫底色
+      color: $primary-200;
+    }
+  }
+}
+
+.form-control {
+  background-color: #ffffff;
+  color: #100c24;
+  border-color: transparent;
+
+  // 統一所有 Placeholder 樣式
+  &::placeholder {
+    color: #909090 !important;
+    opacity: 1; // 避免瀏覽器預設半透明遮罩
+  }
+
+  // 統一聚焦 (Focus) 樣式
+  &:focus {
+    background-color: #ffffff;
+    color: #100c24;
+    border-color: #d2b4fe;
+    box-shadow: 0 0 0 0.25rem rgba(210, 180, 254, 0.25);
+  }
+}

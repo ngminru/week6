@@ -1,0 +1,47 @@
+// 首頁背景圖片
+.tool-info {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/index-bg/index-tool-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
+// 按鈕hover
+.btn:hover {
+  color: $primary-300;
+}
+
+.login-hover:hover{
+  color: $neutral-600;
+  background-color: $primary-200;
+}
+
+
+.divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: $neutral-200; // 直接使用變數色碼
+  opacity: 0.3;                   // 依設計稿調整透明度
+  border: none;
+  margin: 0;
+}
+
+.form-check-input {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+
+  // 1. 勾選狀態：紫色底、紫色邊框
+  &:checked {
+    background-color: $primary-300; // 使用主色（$primary-300 或 $primary-200）
+    border-color: $primary-300;
+  }
+
+  // 3. 移除 Focus 時刺眼的預設藍光外圈，改為淡紫色光暈
+  &:focus {
+    border-color: #d2b4fe;
+    box-shadow: 0 0 0 0.25rem rgba(210, 180, 254, 0.25);
+  }
+}

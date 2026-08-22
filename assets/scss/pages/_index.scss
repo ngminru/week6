@@ -1,3 +1,94 @@
-.index-title {
-  font-size: 100px;
+// 首頁背景圖片
+.banner {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/index-bg/index-hero-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
+// 工具分類背景圖片
+.index-tool{
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/index-bg/index-tool-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// 本月精選背景圖片
+.popular-tool {
+  background:
+    linear-gradient(#100c24, #110d2580),
+    url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/index-bg/landing-highlight-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// 最新上架圖片
+.new-tool{
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/index-bg/index-new-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .tool-img {
+    width: 64px;           // 固定寬度（可依設計稿改為 48px 或 64px）
+    height: 64px;          // 固定高度
+    object-fit: contain;   // 維持等比例縮放不變形，且自動置中於框格內
+  }
+}
+// 上架你的ai工具 背景圖片
+
+.ai-tool{
+  background-image: url(/assets/images/061401e6e94724277d2a9bc8a48a880949a7850d.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+// 2. 下方兩角 24px 圓角
+  border-radius: 0 0 24px 24px;
+
+  // 3. 🔥 關鍵：加上半透明亮色邊框，讓圓弧邊界在深色底上清晰凸顯
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  // 4. 🔥 加上柔和陰影，與下方的「常見問題」區塊拉開層次
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  // 5. 確保內部內容不破出圓角
+  overflow: hidden;
+}
+
+
+// 卡片背景濾鏡效果
+.card{
+  backdrop-filter: blur(24px);
+}
+
+// 按鈕hover
+.btn:hover {
+  color: $primary-300;
+}
+
+// 常見問題手風琴元件
+.accordion-item{
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+}
+.accordion-item:has(.accordion-button:not(.collapsed)){
+  background-color: rgba($white,0.08)
+}
+.accordion-button{
+  background-color: rgba($white, 0.08);
+}
+.accordion-button:not(.collapsed){
+  background-color: rgba($white, 0.12);
+  box-shadow: none;
+}
+.accordion-button:focus{
+  box-shadow: none;
+}
+.accordion-button::after {
+  filter:brightness(0) invert(1);
+}
+

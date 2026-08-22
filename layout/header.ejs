@@ -1,4 +1,181 @@
-<h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<nav class="navbar navbar-expand-lg bg-black fixed-top py-lg-4">
+  <div class="container justify-content-start">
+<!-- logo圖 -->
+    <div class="me-lg-5">
+      <a
+        class="navbar-brand"
+        href="index.html"
+      >
+        <img
+          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2026-week6/Logo.png"
+          alt="Logo"
+          class="logo"
+        />
+      </a>
+    </div>
+<!-- search搜尋放大鏡icon -->
+    <button
+      class="btn p-2 d-lg-none ms-auto me-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <i class="bi bi-search text-white"></i>
+    </button>
+<!-- 側邊欄 漢堡選單 -->
+    <div class="me-lg-4">
+      <button
+        class="navbar-toggler border-0 text-white"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <div
+        class="offcanvas offcanvas-end p-5 p-lg-0 bg-white bg-opacity-8 border-white border-opacity-12 flex-grow-0"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header p-0 mb-4">
+          <button
+            type="button"
+            class="btn text-white ms-auto p-2"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <div
+            class="navbar-nav pe-3 d-flex flex-column justify-content-between h-100"
+          >
+<!-- 探索ai工具 下拉選單 -->
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link d-none d-lg-block text-white"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+              </a>
+              <p
+                class="h6 d-lg-none text-white p-3 border-bottom border-white border-opacity-12 mb-2"
+              >
+                探索 AI 工具
+              </p>
+              <ul
+                class="dropdown-menu bg-transparent bg-lg-white bg-opacity-lg-8 p-2"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >內容生成</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >視覺設計</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >影像製作</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >程式開發</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >教育與學習</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >資料分析</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2 mb-2"
+                    >生產力工具</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item rounded-1 p-2"
+                    >音樂創作</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- 註冊按鈕 -->
+            <button
+              type="button"
+              class="btn btn-primary rounded-pill py-2 d-lg-none"
+            >
+              登入/註冊
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 搜尋框下拉選單 -->
+    <div
+      class="collapse d-lg-block p-3 p-lg-0 position-absolute start-0 end-0 top-100 position-lg-static navbar-collapse"
+      id="collapseExample"
+    >
+      <div class="d-flex gap-1 align-items-center">
+<!-- search輸入框 -->
+        <div class="position-relative text-neutral-300 flex-grow-1">
+          <i
+            class="bi bi-search position-absolute top-50 translate-middle-y navbar-control-icon"
+          ></i>
+          <input
+            type="text"
+            class="form-control rounded-1 navbar-control-input"
+            id="search-input"
+            placeholder="輸入工具名稱、功能或關鍵字"
+          />
+        </div>
+<!-- close關閉按鈕 -->
+        <button
+          class="btn p-2 d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i class="bi bi-x-lg text-white"></i>
+        </button>
+      </div>
+    </div>
+<!-- 登入/註冊 按鈕 -->
+    <a href="login.html" class="py-2 text-decoration-none d-none d-lg-block">登入/註冊</a>
+  </div>
+</nav>

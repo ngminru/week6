@@ -1,4 +1,24 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+footer {
+  .subscribe-box {
+    width: 100%; // 行動版預設 100% 滿版
+
+    @media (min-width: 992px) {
+      width: 416px; // 電腦版固定 416px
+    }
+  }
+
+  .form-control {
+    color: #100c24;
+
+    &::placeholder {
+      color: #6a6978 !important;
+      opacity: 1;
+    }
+
+    &:focus {
+      background-color: #ffffff;
+      color: #100c24;
+      box-shadow: none;
+    }
+  }
 }

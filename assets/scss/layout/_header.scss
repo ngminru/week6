@@ -1,4 +1,84 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo {
+  width: 152px;
+}
+
+// 行動版的樣式
+.offcanvas-body {
+  .dropdown-menu {
+    display: block;
+
+    .dropdown-item:hover {
+      background-color: rgba($color: $white, $alpha: 0.08);
+    }
+  }
+}
+// 電腦版的樣式
+@media (min-width: 992px) {
+  .offcanvas-body {
+    .dropdown-menu:not(.show) {
+      display: none;
+    }
+    .dropdown-menu {
+      border: 1px solid rgba($white, 0.12);
+      backdrop-filter: blur(24px);
+    }
+  }
+}
+
+.offcanvas {
+  backdrop-filter: blur(24px);
+}
+
+// 電腦版樣式
+@media (min-width: 992px) {
+  .offcanvas {
+    backdrop-filter: unset;
+  }
+}
+
+// 搜尋輸入框
+.navbar-control-input {
+  padding: 9px 45px 9px 37px;
+}
+// icon位置
+.navbar-control-icon {
+  left: 13px;
+}
+
+.navbar-collapse {
+  background-color: rgba($white, 0.12);
+  backdrop-filter: blur(24px);
+}
+// 電腦版時清除
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: unset;
+    backdrop-filter: unset;
+  }
+}
+
+.nav-item.dropdown {
+  .nav-link {
+    transition: color 0.2s ease-in-out;
+
+    // 滑鼠移過、點擊瞬間、或下拉選單處於展開狀態 (.show) 時變紫色
+    &:hover,
+    &:active,
+    &.show {
+      color: #d2b4fe !important; // 主題紫色（或填入你的 $primary-200 變數）
+    }
+  }
+
+
+  .dropdown-item {
+
+    &:hover {
+      color: $primary-200;
+    }
+
+    &:active,
+    &.active {
+      color: $primary-200;
+    }
+  }
 }
